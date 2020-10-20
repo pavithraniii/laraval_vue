@@ -5,8 +5,8 @@
  <form>
   <div class="form-group">
     <label for="name1">Product Name</label>
-    <input type="text" class="form-control" id="name1" placeholder="Enter product name">
-    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+    <input type="text" class="form-control" id="name1" placeholder="Enter product name" v-validate="'required'" name="name">
+  
   </div>
   <div class="form-group">
     <label for="quantity1">Quantity</label>
