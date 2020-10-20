@@ -14,6 +14,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//insert
+Route::post('/addItem',[
+    'uses'=>'App\Http\Controllers\ItemsController@postItem'
+]);
+
+//get
+Route::get('/getItem',[
+      'uses'=>'App\Http\Controllers\ItemsController@getItem'
+
+]);
+//delete
+Route::delete('/deleteItem/{id}',[
+    'uses'=>'App\Http\Controllers\ItemsController@deleteItem'
+
+]);
+//put
+
+Route::put('/editItem/{id}',[
+    'uses'=>'App\Http\Controllers\ItemsController@editItem'
+
+]);
