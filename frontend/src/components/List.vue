@@ -53,7 +53,7 @@ export default {
             //console.log(data)
             var position=this.list.findIndex(function(element)
             {
-                return element.id=event.target.id;
+                return element.id==event.target.id;
             }
             );
             this.list.splice(position,1)
