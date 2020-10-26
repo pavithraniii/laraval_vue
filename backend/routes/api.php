@@ -24,6 +24,12 @@ Route::get('/getItem',[
       'uses'=>'App\Http\Controllers\ItemsController@getItem'
 
 ]);
+
+//id eka dunnam ee data tika ganna
+Route::get('/getItems/{id}',[
+    'uses'=>'App\Http\Controllers\ItemsController@getItems'
+
+]);
 //delete
 Route::delete('/deleteItem/{id}',[
     'uses'=>'App\Http\Controllers\ItemsController@deleteItem'

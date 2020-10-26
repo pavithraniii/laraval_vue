@@ -8,6 +8,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Home from './components/Home'
 import List from './components/List'
+import Edit from './components/edit'
 
 const router= new VueRouter(
     //vuerouter kiyala object ekk hadala routes kiyala array ekaka okkom routes tika daa gattaa
@@ -18,7 +19,8 @@ const router= new VueRouter(
             {path:"/about",component:About},
             {path:"",component:Home},
             {path:"/list",component:List},
-            {path:"/contact",component:Contact}
+            {path:"/contact",component:Contact},
+            {path:"/edit/:id",component:Edit}
         ]
     }
 );
