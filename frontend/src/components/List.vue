@@ -8,7 +8,7 @@
 
         <div class="item  col-xs-4 col-lg-4" v-for="y in list"  v-bind:key="y">
             <div class="thumbnail">
-                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <img class="group list-group-image" v-bind:src="'http://localhost:8000/'+y.image" />
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
                       {{y.name}}</h4>

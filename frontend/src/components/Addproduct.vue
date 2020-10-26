@@ -22,12 +22,12 @@
      v-model="item.price"
     >
   </div>
-  <!-- <div class="form-group">
+  <div class="form-group">
     <label for="picture1">picture</label>
     <input type="file" class="form-control" id="picture1" 
     @change="getImage($event)"
     >
-  </div> -->
+  </div>
   
   <button @click.prevent="submitform" type="submit" class="btn btn-primary">Add to the list</button>
 </form>
@@ -43,7 +43,7 @@ export default{
        name:'beats',
        quantity:0,
        price:0,
-       //image:''
+       image:''
      }
 
     }
@@ -61,15 +61,15 @@ submitform(){
 
   });
 },
-// getImage:function(e){
-//   var filereader=new FileReader;
-//   filereader.readAsDataURL(e.target.files[0]);
-//   filereader.onload = (e)=>{
-//     this.item.image=e.target.result;
+getImage:function(e){
+  var filereader=new FileReader();
+  filereader.readAsDataURL(e.target.files[0]);
+  filereader.onload = (e)=>{
+    this.item.image=e.target.result;
    
-//   }
-//    console.log(this.item)
-// }
+  }
+   console.log(this.item)
+}
 
 }
 
